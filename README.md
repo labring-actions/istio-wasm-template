@@ -5,11 +5,12 @@
 This template is designed for compiling Rust libraries into Istio Wasm and
 publishing the resulting package to OCI registry.
 
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
+> WasmPlugins provides a mechanism to extend the functionality provided by the Istio proxy through WebAssembly filters.
 
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
+Be sure to using WasmPlugins for istio 1.11 or later.
+
+[tutorials]: https://istio.io/latest/docs/reference/config/proxy_extensions/wasm-plugin/
+[sdk]: https://github.com/proxy-wasm/proxy-wasm-rust-sdk
 
 ## 🚴 Usage
 
