@@ -9,8 +9,9 @@ publishing the resulting package to OCI registry.
 
 Be sure to using WasmPlugins for istio 1.11 or later.
 
-**[Tutorials]**: https://istio.io/latest/docs/reference/config/proxy_extensions/wasm-plugin/
-**[Rust-SDK]**: https://github.com/proxy-wasm/proxy-wasm-rust-sdk
+**Tutorials**: https://istio.io/latest/docs/reference/config/proxy_extensions/wasm-plugin/
+
+**Rust-SDK**: https://github.com/proxy-wasm/proxy-wasm-rust-sdk
 
 ## 🚴 Usage
 
