@@ -34,7 +34,7 @@ docker-build:
 	echo $(REPO)/$(IMG) > deploy/images/shim/wasmImage
 	sed -i 's#wasm:latest#$(IMG)#g'  deploy/charts/istio-wasm/values.yaml
 
-oci-build: build
+oci-build:
 	sealos build -t $(REPO)/$(IMG)  -f Sealfile   .
 	sealos push $(REPO)/$(IMG)
 	echo $(REPO)/$(IMG) > deploy/images/shim/wasmImage
