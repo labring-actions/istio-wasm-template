@@ -23,7 +23,7 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: {{- include "istio-wasm.fullname" }}-gateway
+  name: {{ include "istio-wasm.fullname" . }}-gateway
   labels:
     {{- include "istio-wasm.labels" . | nindent 4 }}
 spec:
@@ -40,7 +40,7 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: {{- include "istio-wasm.fullname" }}-vs
+  name: {{ include "istio-wasm.fullname" . }}-vs
   labels:
     {{- include "istio-wasm.labels" . | nindent 4 }}
 spec:
@@ -65,7 +65,7 @@ spec:
 apiVersion: extensions.istio.io/v1alpha1
 kind: WasmPlugin
 metadata:
-  name: {{- include "istio-wasm.fullname" }}-wasm
+  name: {{ include "istio-wasm.fullname" . }}-wasm
   labels:
     {{- include "istio-wasm.labels" . | nindent 4 }}
 spec:
