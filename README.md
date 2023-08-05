@@ -43,6 +43,18 @@ make vendor
 REPO=sealos.hub:5000 IMG=wasm/wasm-auth:latest make docker-build
 ```
 
+### 🎁 Build to OCI with sealos
+
+```
+REPO=sealos.hub:5000 IMG=wasm/wasm-auth:latest make oci-build
+```
+
+### 🎁 Push sealos image
+
+```
+REPO=sealos.hub:5000 IMG=wasm/wasm-auth:latest make sealos-push
+```
+
 ## 🔋 Batteries Included
 
 * [`proxy-wasm-rust-sdk`](https://github.com/proxy-wasm/proxy-wasm-rust-sdk) WebAssembly for Proxies (Rust SDK).

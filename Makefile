@@ -33,3 +33,14 @@ docker-build:
 	docker push $(REPO)/$(IMG)
 	echo $(REPO)/$(IMG) > deploy/images/shim/wasmImage
 	sed -i 's#wasm:latest#$(IMG)#g'  deploy/charts/istio-wasm/values.yaml
+
+oci-build: build
+	sealos build -t $(REPO)/$(IMG)  -f Sealfile   .
+	sealos push $(REPO)/$(IMG)
+	echo $(REPO)/$(IMG) > deploy/images/shim/wasmImage
+	sed -i 's#wasm:latest#$(IMG)#g'  deploy/charts/istio-wasm/values.yaml
+
+sealos-push:
+	cd deploy
+	sealos build -t $(REPO)/$(IMG) .
+	sealos push $(REPO)/$(IMG)
