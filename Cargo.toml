@@ -14,7 +14,3 @@ base64 = "0.13.0"
 
 [lib]
 crate-type = ["cdylib"]
-
-[[bin]]
-name = "plugin"  # 指定输出文件名
-path = "src/lib.rs"
