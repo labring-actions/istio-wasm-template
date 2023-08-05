@@ -1,0 +1,15 @@
+# Default values for istio-wasm.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+registry:
+  domain: sealos.hub
+  host: 127.0.0.1
+  port: 5000
+  address: sealos.hub:5000
+  username: admin
+  password: passw0rd
+  auth: YWRtaW46cGFzc3cwcmQ=
+
+wasm:
+  image: wasm:latest
