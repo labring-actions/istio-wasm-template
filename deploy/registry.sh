@@ -20,7 +20,7 @@ echo "ip_address: $ip_address"
 echo "port: $port "
 echo "auth: $auth "
 
-helm upgrade --install registry-proxy charts/registry-proxy --namespace istio-system --create-namespace --values charts/registry-proxy/values.yaml \
+helm upgrade --install {{project-name}} charts/istio-wasm --namespace istio-system --create-namespace --values charts/istio-wasm/values.yaml \
 		--set registry.domain=$domain \
 		--set registry.username=$username \
 		--set registry.password=$password \
