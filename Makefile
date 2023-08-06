@@ -4,21 +4,10 @@ vendor:
 	mkdir -p .cargo && cp config.toml .cargo/
 
 
-define find_wasm_files
-$(shell find $(1) -name "*.wasm")
-endef
-
 build:target
 	rm -rf target
 	cargo build --target wasm32-wasi --release
-	@echo "Searching for .wasm files..."
-	$(eval WASM_FILE := $(shell find target/wasm32-wasi/release -name "*.wasm" -print -quit))
-	@if [ -n "$(WASM_FILE)" ]; then \
-		echo "Found .wasm file: $(WASM_FILE)"; \
-		cp $(WASM_FILE) ./plugin.wasm ; \
-	else \
-		echo "No .wasm file found."; \
-	fi
+	cp target/wasm32-wasi/release/{{project-name}}.wasm ./plugin.wasm
 
 
 target:
