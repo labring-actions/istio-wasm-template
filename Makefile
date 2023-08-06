@@ -7,7 +7,7 @@ vendor:
 build:target
 	rm -rf target
 	cargo build --target wasm32-wasi --release
-	cp target/wasm32-wasi/release/{{project-name}}.wasm ./plugin.wasm
+	cp target/wasm32-wasi/release/plugin.wasm ./plugin.wasm
 
 
 target:
